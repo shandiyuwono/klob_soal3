@@ -7,9 +7,9 @@ import Community from './containers/Community'
 import Company from './containers/Company'
 import Education from './containers/Educational'
 import NavigationBar from './components/NavigationBar'
+import Detail from './containers/Detail'
 
 class App extends Component {
-
   render() {
     return (
       <Router>
@@ -19,6 +19,7 @@ class App extends Component {
           <Route path="/community" component={Community} />
           <Route path="/company" component={Company} />
           <Route path="/educational" component={Education} />
+          <Route path="/detail/:id" component={Detail} />
         </div>
       </Router>
     )

@@ -30,7 +30,7 @@ export default class Company extends Component {
                                 <Card style={{ width: '18rem' }}>
                                     <Card.Img variant="top" src={company.img} />
                                     <Card.Body>
-                                        <Link href="#">{company.name.toUpperCase()}</Link>
+                                        <Link to={{ pathname: `/detail/${company.id}`, state: { data: company }} }>{company.name.toUpperCase()}</Link>
                                     </Card.Body>
                                 </Card>
                             </Col>
