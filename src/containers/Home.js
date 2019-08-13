@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import NavigationBar from '../components/NavigationBar'
 import { Row, Col, Container, Card, Button } from 'react-bootstrap'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
@@ -28,7 +27,6 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-               <NavigationBar /> 
                <Container>
                    <Row>
                        { this.state.index.map((data, index) => {
@@ -40,7 +38,6 @@ export default class Home extends Component {
                                            <Link to={`/${data.name}`} href="#">{data.name.toUpperCase()}</Link>
                                        </Card.Body>
                                    </Card>
-
                                </Col>
                            )
                        })}

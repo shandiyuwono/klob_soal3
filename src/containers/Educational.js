@@ -1,35 +1,36 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 import { Card, Col, Row, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
-export default class Community extends Component {
+export default class Educational extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            communities : []
-        }
+        this.setState({
+            educationals: []
+        })
     }
 
     componentDidMount() {
-        axios.get('./community.json')  
+        axios.get('./educational.json')
             .then(({data}) => {
                 this.setState({
-                    communities: data.data
+                    educationals: data.data
                 })
             })
     }
+
     render() {
         return (
             <Container>
                 <Row>
-                    { this.state.communities.map(community => {
+                    {this.state.educationals.map(educational => {
                         return (
-                            <Col key={community.id} xs={4}>
+                            <Col key={educational.id} xs={4}>
                                 <Card style={{ width: '18rem' }}>
-                                    <Card.Img variant="top" src={community.img} />
+                                    <Card.Img variant="top" src={educational.img} />
                                     <Card.Body>
-                                        <Link href="#">{community.name.toUpperCase()}</Link>
+                                        <Link href="#">{educational.name.toUpperCase()}</Link>
                                     </Card.Body>
                                 </Card>
                             </Col>

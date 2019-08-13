@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-d
 import Home from './containers/Home'
 import Community from './containers/Community'
 import Company from './containers/Company'
-import Education from './containers/Education'
+import Education from './containers/Educational'
+import NavigationBar from './components/NavigationBar'
 
 class App extends Component {
 
@@ -13,10 +14,11 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <NavigationBar />
           <Route exact path="/" component={Home} />
-          <Route exact path="/community" component={Community} />
-          <Route exact path="/company" component={Company} />
-          <Route exact path="/education" component={Education} />
+          <Route path="/community" component={Community} />
+          <Route path="/company" component={Company} />
+          <Route path="/educational" component={Education} />
         </div>
       </Router>
     )
