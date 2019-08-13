@@ -30,7 +30,7 @@ export default class Educational extends Component {
                                 <Card style={{ width: '18rem' }}>
                                     <Card.Img variant="top" src={educational.img} />
                                     <Card.Body>
-                                        <Link href="#">{educational.name.toUpperCase()}</Link>
+                                        <Link to={{ pathname: `/detail/${educational.id}`, state: { data: educational }} }>{educational.name.toUpperCase()}</Link>
                                     </Card.Body>
                                 </Card>
                             </Col>

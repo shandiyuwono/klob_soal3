@@ -29,7 +29,7 @@ export default class Community extends Component {
                                 <Card style={{ width: '18rem' }}>
                                     <Card.Img variant="top" src={community.img} />
                                     <Card.Body>
-                                        <Link href="#">{community.name.toUpperCase()}</Link>
+                                        <Link to={{ pathname: `/detail/${community.id}`, state: { data: community } }}>{community.name.toUpperCase()}</Link>
                                     </Card.Body>
                                 </Card>
                             </Col>
