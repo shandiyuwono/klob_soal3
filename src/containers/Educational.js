@@ -6,9 +6,9 @@ import axios from 'axios'
 export default class Educational extends Component {
     constructor(props) {
         super(props)
-        this.setState({
+        this.state = {
             educationals: []
-        })
+        }
     }
 
     componentDidMount() {
