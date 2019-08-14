@@ -22,9 +22,11 @@ export default class Detail extends Component {
     axios.get(`../${type}.json`)
       .then(({ data }) => {
         data.data.forEach(detail => {
-          this.setState({
-            detail
-          })
+          if(detail.id === id) {
+            this.setState({
+              detail
+            })
+          }
         })
       })
       .catch(({response}) => {
