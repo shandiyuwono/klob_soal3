@@ -15,24 +15,16 @@ class App extends Component {
       <Router>
         <div className="App">
           <NavigationBar />
-          <Route exact path="/" component={Home} />
-          <Route path="/community" component={Community} />
-          <Route path="/company" component={Company} />
-          <Route path="/educational" component={Education} />
-          <Route path="/detail/:id" component={Detail} />
+            <Route exact path="/" component={Home} />
+            <Route path="/community" component={Community} />
+            <Route path="/company" component={Company} />
+            <Route path="/educational" component={Education} />
+            <Route path="/detail/:id" component={Detail} />
         </div>
       </Router>
     )
   }
 }
-// function App() {
-//   return (
-//     <Router>
-//       <div className="App">
-//         <Route exact path="/" component={Home} />
-//       </div>
-//     </Router>
-//   );
-// }
+
 
 export default App;

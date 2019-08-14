@@ -25,26 +25,23 @@ export default class Home extends Component {
     }
 
     render() {
-        return (
-            <div>
-               <Container>
-                   <Row>
-                       { this.state.index.map((data, index) => {
-                           return (
-                               <Col key={index} sm>
-                                   <Card style={{ width: '18rem' }}>
-                                       <Card.Img variant="top" src={data.img} />
-                                       <Card.Body>
-                                           <Link to={`/${data.name}`} href="#">{data.name.toUpperCase()}</Link>
-                                       </Card.Body>
-                                   </Card>
-                               </Col>
-                           )
-                       })}
-                  
-                   </Row>
-               </Container>
-            </div>
-        )
+      return (
+        <Container fluid>
+          <Row className="mt-5">
+            { this.state.index.map((data, index) => {
+              return (
+                <Col key={index} sm style={{ display: 'flex', justifyContent: 'center'}}>
+                  <Card style={{ width: '27rem' }}>
+                    <Card.Img variant="top" src={data.img} />
+                    <Card.Body>
+                      <Link to={`/${data.name}`} href="#" style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#EF534A'}}>{data.name.toUpperCase()}</Link>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              )
+            })}
+          </Row>
+        </Container>
+      )
     }
 }
